@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,15 +23,16 @@ namespace Lab_8
         {
             if (Input == null || _codes == null) return;
             string res = Input;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < _codes.Length; i++)
             {
                 res = res.Replace(_codes[i].Item2.ToString(), _codes[i].Item1);
             }
             _output = res;
+            
         }
         public override string ToString()
         {
-            return base.ToString();
+            return _output;
         }
     }
 }
