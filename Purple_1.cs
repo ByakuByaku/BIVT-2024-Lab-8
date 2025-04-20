@@ -9,11 +9,12 @@ namespace Lab_8
 {
     public class Purple_1 : Purple
     {
-        public Purple_1(string input) : base(input) { }
+        
 
         private string _output;
 
         public string Output => _output;
+        public Purple_1(string input) : base(input) { }
 
         public override void Review()
         {
@@ -67,13 +68,7 @@ namespace Lab_8
         }
 
         
-        public void Print()
-        {
-            for (int i = 0; i < _output.Length; i++)
-            {
-                Console.Write(_output[i]);
-            }
-        }
+        
         public override string ToString()
         {
             return _output;
