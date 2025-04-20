@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.AccessControl;
@@ -47,7 +47,7 @@ namespace Lab_8
                     //while (left < right && chars[left] == '-') left++;
 
                     //while (left < right && chars[right] == '-') right--;
-                    if ((chars[left] == 't' && chars[right] == 'h') || (chars[left] == 'n' && chars[right] == 'd') || (chars[left] == 's' && chars[right] == 't') || (chars[left] == 'r' && chars[right] == 'd'))
+                    if (left!=0 && Char.IsDigit(chars[left]) && Char.IsLetter(chars[right]) || left!=0 && Char.IsDigit(chars[left - 1]) && Char.IsLetter(chars[right])) 
                     {
                         left++;
                         right--;
